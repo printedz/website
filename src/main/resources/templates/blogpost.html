@@ -4,8 +4,9 @@
 <head>
     <title th:text="${post.title}">Título del Post</title>
     <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 </head>
-<body>
+<body class="rainbow-bg">
 <main layout:fragment="content" class="rainbow-bg">
     <div class="blog-container blog-post-full">
         <a th:href="@{/blog}" class="back-to-blog">← Volver al blog</a>

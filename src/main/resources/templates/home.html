@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<link rel="stylesheet" th:href="@{/css/styles.css}">
+<head>
+    <title>Rubber Duck - Inicio</title>
+</head>
+<body>
+<main layout:fragment="content">
+    <div class="home-container">
+        <h1>Bienvenido a Rubber Duck</h1>
+
+        <div class="duck-image">
+            <img th:src="@{/images/rubber-duck.png}" alt="Pato de goma">
+        </div>
+
+        <section class="ai-programming">
+            <h2>Programación con IA</h2>
+            <p>La técnica del "Rubber Duck Debugging" consiste en explicar tu código línea por línea a un pato de goma, lo que te ayuda a encontrar errores mientras verbalizas tu pensamiento.</p>
+            <p>Hoy, con la llegada de la Inteligencia Artificial, nuestro pato de goma ha evolucionado. Las IAs como asistentes de programación pueden no solo escuchar tus explicaciones, sino también proporcionar retroalimentación, sugerir soluciones y ayudarte a mejorar tu código.</p>
+            <h3>Beneficios de programar con IA:</h3>
+            <ul>
+                <li>Detección temprana de errores y bugs</li>
+                <li>Sugerencias de optimización de código</li>
+                <li>Explicaciones claras de conceptos complejos</li>
+                <li>Ayuda para seguir las mejores prácticas</li>
+                <li>Mayor productividad en el desarrollo</li>
+            </ul>
+            <p>¡Tu pato de goma virtual está siempre listo para ayudarte a resolver cualquier problema de programación!</p>
+        </section>
+    </div>
+</main>
+</body>
+</html>

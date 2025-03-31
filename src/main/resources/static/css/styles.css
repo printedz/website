@@ -1,0 +1,167 @@
+/* Estilos generales */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background-color: #f8d348;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #e36414;
+}
+
+main {
+    min-height: 80vh;
+    padding: 2rem;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Estilos de la página de inicio */
+.home-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #e36414;
+}
+
+.duck-image {
+    margin: 2rem 0;
+}
+
+.duck-image img {
+    max-width: 300px;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.duck-image img:hover {
+    transform: rotate(5deg) scale(1.05);
+}
+
+.ai-programming {
+    text-align: left;
+    background-color: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.ai-programming h2 {
+    color: #e36414;
+    margin-bottom: 1rem;
+}
+
+.ai-programming h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.ai-programming p {
+    margin-bottom: 1rem;
+}
+
+.ai-programming ul {
+    list-style-position: inside;
+    margin: 1rem 0 1rem 1rem;
+}
+
+/* Estilos para la página del blog con fondo de arcoíris */
+.rainbow-bg {
+    /* Fondo con gradiente de arcoíris */
+    background: linear-gradient(
+        124deg,
+        #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840,
+        #1ddde8, #2b1de8, #dd00f3, #dd00f3
+    );
+    background-size: 1800% 1800%;
+    animation: rainbow 18s ease infinite;
+}
+
+@keyframes rainbow {
+    0% { background-position: 0% 82% }
+    50% { background-position: 100% 19% }
+    100% { background-position: 0% 82% }
+}
+
+.blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+.blog-post {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.blog-post:last-child {
+    border-bottom: none;
+}
+
+.blog-post h2 {
+    color: #e36414;
+    margin-bottom: 0.5rem;
+}
+
+.post-meta {
+    font-style: italic;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: #e36414;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}

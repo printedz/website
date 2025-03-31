@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout}">
+<head>
+    <title th:text="${post.title}">Título del Post</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+<main layout:fragment="content" class="rainbow-bg">
+    <div class="blog-container blog-post-full">
+        <a th:href="@{/blog}" class="back-to-blog">← Volver al blog</a>
+
+        <article class="blog-post">
+            <div th:utext="${post.content}">
+                <!-- El contenido HTML renderizado desde Markdown se mostrará aquí -->
+            </div>
+        </article>
+    </div>
+</main>
+</body>
+</html>

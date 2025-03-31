@@ -165,3 +165,51 @@ h1 {
 .read-more:hover {
     text-decoration: underline;
 }
+
+/* Estilos adicionales para la página de post individual */
+.blog-post-full {
+    padding-top: 1rem;
+}
+
+.back-to-blog {
+    display: inline-block;
+    margin-bottom: 2rem;
+    color: #e36414;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-to-blog:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para el contenido Markdown renderizado */
+.blog-post h1, .blog-post h2, .blog-post h3, .blog-post h4 {
+    color: #e36414;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.blog-post ul, .blog-post ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.blog-post p {
+    margin-bottom: 1rem;
+}
+
+.blog-post code {
+    background-color: #f0f0f0;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: monospace;
+}
+
+.blog-post pre {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}

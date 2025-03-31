@@ -10,28 +10,11 @@
     <div class="blog-container">
         <h1>Blog del Rubber Duck</h1>
 
-        <article class="blog-post">
-            <h2>Cómo la IA está transformando el desarrollo de software</h2>
-            <p class="post-meta">Publicado: 10 de enero, 2023</p>
-            <p>La inteligencia artificial está revolucionando la forma en que desarrollamos software. Desde la generación automática de código hasta la detección predictiva de errores, las herramientas basadas en IA están permitiendo a los desarrolladores trabajar de manera más eficiente y producir código de mayor calidad.</p>
-            <p>Los copilots de código impulsados por IA ahora pueden sugerir bloques enteros de código, documentación, y hasta tests unitarios, ahorrando tiempo valioso a los desarrolladores...</p>
-            <a href="#" class="read-more">Leer más</a>
-        </article>
-
-        <article class="blog-post">
-            <h2>Técnicas de Debugging Avanzadas con IA</h2>
-            <p class="post-meta">Publicado: 25 de febrero, 2023</p>
-            <p>El debugging tradicionalmente ha sido un proceso que consume mucho tiempo. Los desarrolladores pasan horas revisando código, ejecutando pruebas y tratando de reproducir errores. Con las nuevas herramientas de debugging asistidas por IA, este proceso se está volviendo mucho más eficiente.</p>
-            <p>Las IAs pueden analizar patrones de errores, sugerir posibles causas y hasta proponer soluciones basadas en millones de casos similares...</p>
-            <a href="#" class="read-more">Leer más</a>
-        </article>
-
-        <article class="blog-post">
-            <h2>El Futuro de la Programación: Humanos y IA Trabajando Juntos</h2>
-            <p class="post-meta">Publicado: 18 de marzo, 2023</p>
-            <p>A medida que las herramientas de IA se vuelven más sofisticadas, surge la pregunta: ¿Reemplazarán los modelos de IA a los programadores humanos? La respuesta es que estamos entrando en una era de colaboración, no de reemplazo.</p>
-            <p>Los desarrolladores que aprenden a trabajar eficientemente con asistentes de IA están logrando niveles de productividad sin precedentes...</p>
-            <a href="#" class="read-more">Leer más</a>
+        <article class="blog-post" th:each="post : ${posts}">
+            <h2 th:text="${post.title}">Título del Post</h2>
+            <p class="post-meta" th:text="'Publicado: ' + ${#temporals.format(post.publishDate, 'd de MMMM, yyyy')}">Fecha de publicación</p>
+            <div th:utext="${post.preview}">Vista previa del post</div>
+            <a th:href="@{'/blog/post/' + ${post.id}}" class="read-more">Leer más</a>
         </article>
     </div>
 </main>

@@ -9,8 +9,8 @@ COPY src ./src
 # Compilar la aplicación
 RUN mvn clean package -DskipTests
 
-# Etapa de ejecución - usando una imagen compatible con ARM64
-FROM arm64v8/openjdk:17-slim
+# Etapa de ejecución - usando una imagen compatible con ambas arquitecturas
+FROM eclipse-temurin:17-jre-jammy
 
 # Crear un usuario no root para ejecutar la aplicación
 RUN useradd -ms /bin/bash spring

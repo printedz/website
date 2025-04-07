@@ -1,0 +1,22 @@
+version: '3.8'
+
+services:
+  rubberduckie-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: rubberduckie:latest
+    container_name: rubberduckie-container
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_PROFILES_ACTIVE=prod
+    restart: unless-stopped
+    volumes:
+      - ./src/main/resources/blog:/app/blog
+    networks:
+      - rubberduckie-network
+
+networks:
+  rubberduckie-network:
+    driver: bridge

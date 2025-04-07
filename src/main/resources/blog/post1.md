@@ -1,6 +1,5 @@
 # Cómo la IA está transformando el desarrollo de software
 
-*Publicado: 10 de enero, 2023*
 
 La inteligencia artificial está revolucionando la forma en que desarrollamos software. Desde la generación automática de código hasta la detección predictiva de errores, las herramientas basadas en IA están permitiendo a los desarrolladores trabajar de manera más eficiente y producir código de mayor calidad.
 

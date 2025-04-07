@@ -80,9 +80,11 @@ public class BlogService {
         Matcher matcher = pattern.matcher(markdown);
         if (matcher.find()) {
             try {
-                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d 'de' MMMM, yyyy");
+                // Modificar el patrón para que coincida exactamente con el formato esperado
+                DateTimeFormatter formatter = DateTimeFormatter.ofPattern("d 'de' MMMM',' yyyy");
                 return LocalDate.parse(matcher.group(1), formatter);
             } catch (Exception e) {
+                e.printStackTrace(); // Para ver el error exacto en los logs
                 return LocalDate.now();
             }
         }
